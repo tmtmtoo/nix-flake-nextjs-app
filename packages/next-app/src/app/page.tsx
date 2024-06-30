@@ -1,7 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-export default function Home() {
+const sleep = async (ms: number) => new Promise(r => setTimeout(r, ms));
+
+export default async function Home() {
+  await sleep(1000);
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
