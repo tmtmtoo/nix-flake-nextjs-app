@@ -1,14 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { myPow } from "./math";
 
-const sleep = async (ms: number) => new Promise(r => setTimeout(r, ms));
-
-export default async function Home() {
-  await sleep(1000);
+export default function Home() {
+  const num = myPow(5)
 
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+        <p>{num}</p>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
