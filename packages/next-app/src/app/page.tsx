@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import { myPow } from "./math";
 
 export default function Home() {
-  const num = myPow(5)
+  const num = myPow(8)
 
   return (
     <main className={styles.main}>

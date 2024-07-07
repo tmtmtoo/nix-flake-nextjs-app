@@ -1,7 +1,7 @@
 {
   "name": "nix-flake-nodejs-app",
   "scripts": {
-    "build": "cd packages/next-app && pnpm build",
+    "build": "turbo build",
     "test": "turbo test"
   },
   "license": "ISC",

@@ -1,9 +1,11 @@
 {
   "name": "my-math",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dits/index.d.ts",
   "scripts": {
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "build": "tsc"
   },
   "devDependencies": {
     "typescript": "^5",
