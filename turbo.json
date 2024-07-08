@@ -1,10 +1,23 @@
 {
-    "tasks": {
-      "test": {
-        "dependsOn": ["^test"] 
-      },
-      "build": {
-        "dependsOn": ["^build"]
-      }
+  "tasks": {
+    "test": {
+      "dependsOn": [
+        "^test"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
     }
   }
+}

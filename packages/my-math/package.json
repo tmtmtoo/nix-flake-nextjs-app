@@ -5,7 +5,8 @@
   "types": "dits/index.d.ts",
   "scripts": {
     "test": "vitest --run",
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsc --watch"
   },
   "devDependencies": {
     "typescript": "^5",

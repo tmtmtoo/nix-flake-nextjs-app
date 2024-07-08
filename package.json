@@ -2,7 +2,8 @@
   "name": "nix-flake-nodejs-app",
   "scripts": {
     "build": "turbo build",
-    "test": "turbo test"
+    "test": "turbo test",
+    "dev": "turbo dev"
   },
   "license": "ISC",
   "private": true,
