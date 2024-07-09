@@ -3,12 +3,14 @@
   "scripts": {
     "build": "turbo build",
     "test": "turbo test",
-    "dev": "turbo dev"
+    "dev": "turbo dev",
+    "syncpack": "syncpack list-mismatches"
   },
   "license": "ISC",
   "private": true,
   "packageManager": "pnpm@9.4.0+sha256.b6fd0bfda555e7e584ad7e56b30c68b01d5a04f9ee93989f4b93ca8473c49c74",
   "devDependencies": {
+    "syncpack": "^12.3.3",
     "turbo": "^2.0.6"
   }
 }
