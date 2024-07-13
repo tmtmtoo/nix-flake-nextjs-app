@@ -1,7 +1,8 @@
 {
   "name": "nix-flake-nodejs-app",
   "scripts": {
-    "build": "turbo build",
+    "build": "turbo build && ./artifacts.sh",
+    "start": "node ./dist/packages/next-app/server.js",
     "test": "turbo test",
     "dev": "turbo dev",
     "syncpack": "syncpack list-mismatches"
