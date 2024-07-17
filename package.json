@@ -1,7 +1,7 @@
 {
   "name": "nix-flake-nodejs-app",
   "scripts": {
-    "build": "turbo build && ./artifacts.sh",
+    "build": "cd packages/my-math && pnpm build && cd ../next-app && pnpm build && cd ../../ && ./artifacts.sh",
     "start": "node ./dist/packages/next-app/server.js",
     "test": "turbo test",
     "dev": "turbo dev",
