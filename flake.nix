@@ -25,15 +25,27 @@
             corepack enable --install-directory=$out/bin
           '';
         };
-      in
-      {
-        packages.default = pnpm2nix.packages."${system}".mkPnpmPackage {
+        app = pnpm2nix.packages."${system}".mkPnpmPackage {
           src = ./.;
           installInPlace = true;
           script = "build";
           installPhase = ''
             mv ./dist $out
           '';
+        };
+      in
+      {
+        packages.default = app;
+        packages.docker = pkgs.dockerTools.buildImage {
+          name = "nix-flake-nextjs-app";
+          tag = "latest";
+
+          config = {
+            Cmd = [ "${pkgs.nodejs}/bin/node" "${app}/packages/next-app/server.js" ];
+            ExposedPorts = {
+              "3000/tcp" = { };
+            };
+          };
         };
         devShell = pkgs.mkShell {
           buildInputs = [
